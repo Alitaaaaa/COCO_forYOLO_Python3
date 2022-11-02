@@ -33,18 +33,18 @@ coco=COCO(annFile)
 
 cats = coco.loadCats(coco.getCatIds())
 nms = [cat['name'] for cat in cats]
-print('COCO categories: \n{}\n'.format(' '.join(nms)))
+print(('COCO categories: \n{}\n'.format(' '.join(nms))))
 
 nms = set([cat['supercategory'] for cat in cats])
-print('COCO supercategories: \n{}'.format(' '.join(nms)))
+print(('COCO supercategories: \n{}'.format(' '.join(nms))))
 
 # display COCO categories and supercategories
 cats = coco.loadCats(coco.getCatIds())
 nms=[cat['name'] for cat in cats]
-print('COCO categories: \n{}\n'.format(' '.join(nms)))
+print(('COCO categories: \n{}\n'.format(' '.join(nms))))
 
 nms = set([cat['supercategory'] for cat in cats])
-print('COCO supercategories: \n{}'.format(' '.join(nms)))
+print(('COCO supercategories: \n{}'.format(' '.join(nms))))
 
 # get all images containing given categories, select one at random
 catIds = coco.getCatIds(catNms=['zebra']);

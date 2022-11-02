@@ -58,7 +58,7 @@ if redo or not os.path.exists(train_list_file):
                 abs_img_file = "{}/{}/{}/{}.{}".format(data_dir, img_dir, dst_img_dir, name, img_ext)
                 img_files.append(abs_img_file)
     # Shuffle the images.
-    idx = [i for i in xrange(len(img_files))]
+    idx = [i for i in range(len(img_files))]
     shuffle(idx)
     with open(train_list_file, "w") as f:
         for i in idx:
@@ -80,7 +80,7 @@ if redo or not os.path.exists(minival_list_file):
                 abs_img_file = "{}/{}/{}/{}.{}".format(data_dir, img_dir, dst_img_dir, name, img_ext)
                 img_files.append(abs_img_file)
     with open(minival_list_file, "w") as f:
-        for i in xrange(len(img_files)):
+        for i in range(len(img_files)):
             f.write("{}\n".format(img_files[i]))
 
 if redo or not os.path.exists(test_list_file):
@@ -99,7 +99,7 @@ if redo or not os.path.exists(test_list_file):
                 abs_img_file = "{}/{}/{}/{}.{}".format(data_dir, img_dir, dst_img_dir, name, img_ext)
                 img_files.append(abs_img_file)
     with open(test_list_file, "w") as f:
-        for i in xrange(len(img_files)):
+        for i in range(len(img_files)):
             f.write("{}\n".format(img_files[i]))
 
 change(src_label_dir, dst_label_dir)
